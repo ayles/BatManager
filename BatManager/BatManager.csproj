@@ -74,6 +74,7 @@
       <DependentUpon>ConfirmWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Core\EncodingManager.cs" />
     <Compile Include="Core\JobObject.cs" />
     <Compile Include="Core\LogQueue.cs" />
     <Compile Include="Core\LogString.cs" />

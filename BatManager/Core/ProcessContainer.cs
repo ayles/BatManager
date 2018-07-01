@@ -185,8 +185,8 @@ namespace BatManager.Core {
                 RedirectStandardOutput = true,
                 UseShellExecute = false,
                 CreateNoWindow = true,
-                StandardOutputEncoding = Encoding.UTF8,
-                StandardErrorEncoding = Encoding.UTF8
+                StandardOutputEncoding = EncodingManager.EncodingToUse,
+                StandardErrorEncoding = EncodingManager.EncodingToUse
             };
 
             _startCommand = new DelegateCommand(o => { StartProcess(); },
@@ -212,6 +212,7 @@ namespace BatManager.Core {
             } catch (Win32Exception e) {
                 AddLog("Cant open file \"" + Executable + "\"", LogString.LogType.Debug);
             } catch (Exception e) {
+                AddLog(e + "");
                 Console.WriteLine(e);
             }
             
