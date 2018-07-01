@@ -1,0 +1,22 @@
+﻿<Window x:Class="BatManager.ConfirmWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        SizeToContent="WidthAndHeight"
+        UseLayoutRounding="True"
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        AllowsTransparency="True"
+        Background="{StaticResource BackgroundBrush}">
+        <Border BorderBrush="Black" BorderThickness="1">
+                <DockPanel VerticalAlignment="Bottom" HorizontalAlignment="Stretch">
+                        <TextBlock DockPanel.Dock="Top" HorizontalAlignment="Center" Margin="10">Are you sure?</TextBlock>
+                        <Button Background="#cc3333" BorderBrush="#ee1111" DockPanel.Dock="Left" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
+                                Width="70" Margin="6 0 6 6" Click="ConfirmClick">Yes</Button> 
+                        <Button DockPanel.Dock="Left" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
+                                Width="70" Margin="0 0 6 6" Click="RefuseClick" IsCancel="True">No</Button>
+                </DockPanel>    
+        </Border>
+</Window>
