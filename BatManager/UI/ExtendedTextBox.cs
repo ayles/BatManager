@@ -80,7 +80,7 @@ namespace BatManager.UI {
             _flusher = new Thread(() => {
                 while (true) {
                     _newLogStringsEvent.WaitOne();
-                    Dispatcher.Invoke(Flush);
+                    Dispatcher.Invoke(new Action(Flush));
                     _newLogStringsEvent.Reset();
                     Thread.Sleep(50);
                 }

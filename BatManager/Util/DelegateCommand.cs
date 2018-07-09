@@ -32,7 +32,7 @@ namespace BatManager.Util {
         }
 
         public void RaiseCanExecuteChanged() {
-            Application.Current?.Dispatcher?.Invoke(() => { CanExecuteChanged?.Invoke(this, EventArgs.Empty); });
+            Application.Current?.Dispatcher?.Invoke(new Action(() => { CanExecuteChanged?.Invoke(this, EventArgs.Empty); }));
         }
     }
 }

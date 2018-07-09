@@ -212,7 +212,6 @@ namespace BatManager.Core {
             } catch (Win32Exception e) {
                 AddLog("Cant open file \"" + Executable + "\"", LogString.LogType.Debug);
             } catch (Exception e) {
-                AddLog(e + "");
                 Console.WriteLine(e);
             }
             
